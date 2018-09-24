@@ -374,8 +374,8 @@
 </section>
 <footer class="footer container-fluid">
     <div class="row">
-        <div class="col-lg-8">
-            <ul class="footer_list1">
+        <div class="col-lg-8 footer-nav_cont">
+            <ul class="footer-list1">
                 <li class=" footer-item first">
                     <a href="">Спальни</a>
                 </li>
@@ -449,7 +449,7 @@
                     <a href="">Столы</a>
                 </li>
             </ul>
-            <ul class="footer-list4">
+            <ul class="footer-list5">
                 <li class="footer-item first">
                     <a href="">Прихожие</a>
                 </li>
@@ -466,7 +466,7 @@
                     <a href="">Зеркала</a>
                 </li>
             </ul>
-            <ul class="footer-list5">
+            <ul class="footer-list6">
                 <li class="footer-item first">
                     <a href="">
                         Предметы интерьера
@@ -503,7 +503,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 social-cont">
                 <ul class="footer-social">
                     <li class="social-item">
                         <a href="" target="_blank" class="mdi mdi-instagram"></a>
@@ -516,16 +516,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-12">
+            <div class="col-lg-12 form-cont_footer">
                 <p class="form-title">Остались вопросы? Напишите нам.</p>
                 <form class="footer-form" method="get">
                     <div class="form-top">
-                        <input type="text" placeholder="Имя">
-                        <input type="text" placeholder="Эл. почта">
+                        <input type="text" name="Имя" class="name-input" placeholder="Имя" required>
+                        <input type="email" name="Эл.почта" placeholder="Эл. почта" required>
                     </div>
-                    <textarea placeholder="Комментарий">
-
-                    </textarea>
+                    <textarea placeholder="Комментарий" name="Сообщение"></textarea>
                     <button type="submit" class="btn">
                         Отправить
                     </button>
@@ -533,12 +531,12 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row footer-bottom">
         <div class="col-lg-3">
             <a href="http://kdm1.ru" target="_blank" class="kdm">
                 <img src="img/kdm.svg" alt="">
                 <p>Сайт разработан в&nbsp;агентстве<br>
-                    &laquo;Клиника доброго маркетолога&raquo;</p>
+                    <span>&laquo;Клиника доброго маркетолога&raquo;</span></p>
             </a>
         </div>
         <div class="col-lg-2 offset-lg-2">
@@ -546,7 +544,7 @@
                 document.write(new Date().getFullYear());
             </script></p>
         </div>
-        <div class="offset-lg-1 col-lg-4">Заполняя любую печатную форму на&nbsp;нашем сайте, вы&nbsp;автоматически принимаете условия <a href="">Политики Конфиденциальности</a></div>
+        <div class="offset-lg-1 col-lg-4 politic">Заполняя любую печатную форму на&nbsp;нашем сайте, вы&nbsp;автоматически принимаете условия <a href="">Политики Конфиденциальности</a></div>
     </div>
 </footer>
 <script src="js/script.js"></script>
