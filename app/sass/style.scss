@@ -5,6 +5,7 @@ $gradient2: radial-gradient(circle at 15% 45%, #a4ac8c, #777b63);
 $gadrient2-invert: radial-gradient(circle at 15% 45%,#777b63, #a4ac8c);
 $gradient3: radial-gradient(circle at 15% 45%,  rgba(125, 44, 60, 1), rgba(162, 62, 82, 1));
 $gradient4: radial-gradient(circle at 15% 45%, rgba(152, 98, 88, 1), rgba(111, 66, 58, 1));
+$gradient4-opacity: radial-gradient(circle at 15% 45%,  rgba(111,66, 58,0.85),rgba(152,98,88,0.85));
 
 $anim: all 0.2s linear;
 
@@ -1244,6 +1245,12 @@ nav {
     padding-bottom: 10px;
     transition: all 0.3s linear;
 
+    .favorites-name {
+      font-family: ASM, Arial, sans-serif;
+      font-size: 24px;
+      color: black;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -1359,3 +1366,202 @@ nav {
   }
 }
 
+//bedrooms page
+
+.bedrooms-page {
+  padding-top: 100px;
+  position: relative;
+  margin-bottom: 23%;
+
+  .bed-block1 {
+    background: linear-gradient( to bottom, rgba(175, 175, 175, 0.5135) 0%,rgba(139, 139, 139, 0.29445) 44.39%, rgba(0,0,0,0.15) 82.11%), url('../img/bedrooms/block1.jpg');
+    background-repeat: no-repeat;
+    background-size: contain ,cover;
+    padding-top: 20px;
+    padding-bottom: 13%;
+  }
+
+  .breadcrumbs {
+    display: flex;
+    padding-left: 30px;
+    margin-bottom: 21px;
+
+    .bread-item {
+
+      a {
+        font-family: ASR, Arial, sans-serif;
+        font-size: 14px;
+        color: white;
+        position: relative;
+        padding: 0 15px;
+
+        &::before {
+          content: '';
+          top: 4px;
+          right: -3px;
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          background: white;
+          transform: rotate(45deg);
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:last-of-type {
+        a::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .bed-promo {
+    background: $gradient4-opacity;
+    padding: 58px 85px 44px;
+    max-width: 656px;
+
+    img {
+      max-width: 55px;
+      margin-bottom: 27px;
+    }
+  }
+
+  .bed-block2 {
+    margin-top: 60px;
+
+    .left-title {
+      font-family: ASM, Arial, sans-serif;
+      font-size: 24px;
+      color: black;
+      margin-bottom: 30px;
+    }
+
+    .left-item a {
+      font-family: ASM, Arial, sans-serif;
+      font-size: 18px;
+      padding: 4px 0;
+      color: black;
+      display: block;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .left-inner-list {
+      display: none;
+    }
+
+    .left-innet-item {
+      a {
+        font-family: ASR, Arial, sans-serif;
+        font-size: 10px;
+
+        @media screen and (min-width: 1680px) {
+          font-size: 12px;
+          padding: 2px 0px;
+        }
+      }
+    }
+
+    .left-cont {
+      border: 1px solid $primary;
+      padding: 45px 85px 40px;
+      max-width: 400px;
+    }
+  }
+
+  .bed-right-item {
+    margin-bottom: 25px;
+
+    &:hover {
+      .catalog-item-name {
+        text-decoration: underline;
+      }
+    }
+
+    .img-cont {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.catalog-item-title {
+  font-family: AB, Arial, sans-serif;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 38px;
+}
+
+.catalog-item-desc {
+  font-family: ASM, Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.catalog-item-name {
+  font-family: ASR, Arial, sans-serif;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  display: block;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.img-cont {
+  position: relative;
+  overflow: hidden;
+
+  .item-desc-wrap {
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all 0.3s linear;
+    transform: translateY(10vh);
+  }
+
+  &:hover {
+    .item-desc-wrap {
+      transform: none;
+    }
+  }
+
+  .availability, .infavorite {
+    font-family: ASM, Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: -5px;
+      font-size: 22px;
+    }
+  }
+
+  .availability {
+    margin-bottom: 7px;
+  }
+}

@@ -79,4 +79,22 @@ $(document).ready(function () {
         $('.delete-btn-anim').remove();
     }
 
+    //bedrooms hover in left nav menu
+
+    $('.left-item-first').mouseenter(function() {
+        var inner_list = $(this).parent().find('.left-inner-list');
+
+        $('.left-inner-list').css('display', 'none');
+        inner_list.css('display', 'block')
+    });
+
+    //add in favorites. counter
+
+    $('.infavorite').click(function () {
+       var count = parseInt($('.favoritе span').text());
+       count = count + 1;
+       console.log(count)
+        $('.favoritе span').text(count);
+    });
+
 });
