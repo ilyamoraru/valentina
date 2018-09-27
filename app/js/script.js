@@ -136,23 +136,11 @@ $(document).ready(function () {
     //     $('.left-inner-list').removeClass('left-inner-list_show');
     // }
 
-    $('.left-item-first').click(function() {
-       var href = $(this).attr('data-href');
+    $('.left-item-first').mouseenter(function() {
        var item = $(this);
 
-       setTimeout(add_href, 300);
-
-       function add_href() {
-           item.attr('href', href);
-       }
-
-       function remove_href() {
-           item.removeAttr('href');
-       }
-
         var inner_list = $(this).parent().find('.left-inner-list');
-
-        $('.left-inner-list').removeClass('left-inner-list_show');
+        
         inner_list.addClass('left-inner-list_show', 100, 'linear');
     });
 
