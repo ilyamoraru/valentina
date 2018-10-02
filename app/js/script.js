@@ -18,11 +18,14 @@ $(document).ready(function () {
 
     //collection-item slider in block1
 
-    $('.collection-item_slider').slick({
-        arrows: false,
-        dots: true,
-    });
+    if (window.matchMedia("(min-width: 1000px)").matches) {
 
+        $('.collection-item_slider').slick({
+            arrows: false,
+            dots: true,
+        });
+
+    }
     //item-page slider in left block
 
     $('.item-page-slider_top').slick({
@@ -199,6 +202,30 @@ $(document).ready(function () {
     $('.close-menu').click(function () {
         $('.modal-overlay').css('display','none');
         $('.mobile-menu').removeClass('mobile-menu_show')
+    });
+
+    //catalog-mobile
+
+    //open
+
+    $('.catalog-open').click(function() {
+        $('.mobile-menu').removeClass('mobile-menu_show');
+        $('.mobile-catalog').addClass('moble-catalog_show');
+    });
+
+    //back to menu
+
+    $('.mdi-arrow-left').click(function() {
+        $('.mobile-catalog').removeClass('moble-catalog_show');
+        $('.mobile-menu').addClass('mobile-menu_show');
+
+    });
+
+    //close all
+
+    $('.close-catalog').click(function() {
+        $('.mobile-menu').removeClass('mobile-menu_show');
+        $('.mobile-catalog').removeClass('moble-catalog_show');
     });
 
     //узнать цену
