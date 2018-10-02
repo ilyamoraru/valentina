@@ -140,7 +140,7 @@ $(document).ready(function () {
        var item = $(this);
 
         var inner_list = $(this).parent().find('.left-inner-list');
-        
+
         inner_list.addClass('left-inner-list_show', 100, 'linear');
     });
 
@@ -183,6 +183,23 @@ $(document).ready(function () {
     //modal
 
     //open
+
+    //mobile-menu
+
+    //open
+
+    $('.burger-menu').click(function() {
+        $('.modal-overlay').css('display','block');
+        $('.mobile-menu').addClass('mobile-menu_show');
+    });
+
+
+    //close
+
+    $('.close-menu').click(function () {
+        $('.modal-overlay').css('display','none');
+        $('.mobile-menu').removeClass('mobile-menu_show')
+    });
 
     //узнать цену
 
@@ -283,5 +300,13 @@ $(document).ready(function () {
     }
 
     setTimeout(hide_bg, 1000);
+
+    if (window.matchMedia("(min-width: 1000px)").matches) {
+        $('.desctop-hidden').remove();
+    }
+
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+        $('.mobile-hidden').remove();
+    }
 
 });
